@@ -1,0 +1,37 @@
+def greet (first_name, last_name):
+    print(f"{first_name}, {last_name}")
+    print("welcome on board")
+
+
+greet("Lorraine", "Dumbatsuro")
+greet("Verna", "Dumbatsuro")
+greet("Tapiwa", "Ndemera")
+
+
+
+def my_age():
+    print("My age is 23")
+my_age() 
+
+
+def parent(*kid):
+    print("who is short", " " + kid[4])
+parent("rudo","james", "Taku", "kin", "kent")
+
+def numbers():
+    print("numbers 1,10")# calling function syntax
+numbers()
+
+
+#Argument
+def number (country,city):
+    print(f"{country},{city}")
+    print("african")
+
+number("Zimbabwe", " Harare")
+
+#ABITRARY ARGUMENTS
+
+def girls(*black):
+        print("Who is above 18:" ," " + black[2])
+girls("ruth", "kent", "ayeesha", "roy", "mercy")

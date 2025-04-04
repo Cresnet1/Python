@@ -1,0 +1,47 @@
+Colors = ["red", "green", "yellow","purple", "pink"]
+print(Colors)
+print(Colors[2])#index
+print(len(Colors))#len
+Colors.remove("pink")#remove
+Colors.pop(0)
+print(Colors)
+Colors[1] = "white"#replace
+print(Colors)
+import random
+print(random.choice(Colors))#random
+Fruits = ["APPLE", "CHERRY", "BANANA","kiwi","coconut"]
+print(Fruits.index("BANANA"))
+print(Fruits[1:4:2])
+Fruits[-1:-2] = "POPO","ORANGE"
+print(Fruits)
+
+
+a = "Hello World"
+print(a[::-1])#backwards
+print(a[-1::-1])
+
+x = ["helo", "cherry", "banana"]
+x[0:3:2] = "mango","lemon"
+
+
+
+
+
+a = {"tanaka", "rudo", "james", "tino"}
+print(a)
+b = {"tino","kin"}
+a.update(b)
+print(a)
+
+car= {"brand": "Ford","model": "Mustang", "year": 1964}
+print(car)
+print(car.keys())
+car.update({"brand": "benz"})#update
+car.pop("brand")
+print(car)
+car.popitem()#pop
+print(car)
+
+
+
+

@@ -1,0 +1,25 @@
+a = "Hello World"
+print(a[::-1])#backwards
+
+Fruits = ["apple", "banana", "mango", "orange"]
+print(Fruits)
+print(len(Fruits))#len
+print(Fruits[0])#index
+Fruits.remove("mango")#remove
+print(Fruits)
+Fruits[2] = "cherry"#replace
+print(Fruits)
+import random
+print(random.choice(Fruits))#random
+
+
+Colors = ["red", "blue", "purple", "pink", "white"]
+print(Colors[1])
+print(len(Colors))
+Colors.remove("pink")
+print(Colors)
+Colors[-1] = "green"
+print(Colors)
+import random
+print(random.choice(Colors))
+ 
