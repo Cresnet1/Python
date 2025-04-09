@@ -4,13 +4,13 @@ import yagmail
 import os
 
 # Step 1: Read Excel data
-df = pd.read_excel('employees.xlsx')
+df = pd.read_excel(r'C:\Users\uncommonStudent\Desktop\Python\EMPLOYEE.xlsx')
 
-# Step 2: Create output folder
+# Step 2: Create output folder if it doesn't exist
 if not os.path.exists('payslips'):
     os.makedirs('payslips')
 
-# Step 3: Loop through each employee
+# Step 3: Loop through each employee and generate payslip
 for index, row in df.iterrows():
     emp_id = row['Employee ID']
     name = row['Name']
@@ -25,7 +25,7 @@ for index, row in df.iterrows():
     # Step 4: Create PDF payslip
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font("Arial", size=12)
+    pdf.set_font("Arial", size=12)   
 
     pdf.set_fill_color(230, 230, 250)  # Light lavender background
     pdf.cell(200, 10, txt="Monthly Payslip", ln=True, align='C', fill=True)
@@ -42,9 +42,9 @@ for index, row in df.iterrows():
     filename = f"payslips/{emp_id}.pdf"
     pdf.output(filename)
 
-    # Step 5: Send email
+    # Step 5: Send email with payslip
     try:
-        yag = yagmail.SMTP(user="ldumbatsuro6@gn", password="YOUR_PASSWORD")
+        yag = yagmail.SMTP(user="ldumbatsuro6@gmail.com", password="qqijrcubmnpttjxu")  # ✅ Use full email
 
         subject = "Your Payslip for This Month"
         body = f"""
@@ -57,7 +57,21 @@ for index, row in df.iterrows():
         """
 
         yag.send(to=email, subject=subject, contents=body, attachments=filename)
-        print(f"Payslip sent to {name} at {email}")
+        print(f"📨 Payslip sent to {name} at {email}")
 
     except Exception as e:
-        print(f"Failed to send email to {email}: {e}")
+        print(f"❌ Failed to send email to {email}: {e}")
+
+# ✅ Final tip: Notify when everything is done
+print("✅ All payslips have been generated and emails sent successfully!")
+
+
+
+
+
+        
+        
+
+
+
+        
